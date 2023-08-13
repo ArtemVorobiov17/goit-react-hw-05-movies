@@ -5,7 +5,7 @@ import photo from './photo.png';
 import css from './Cast.module.css';
 
 
-export const Cast = () => {
+const Cast = () => {
     const { movieId } = useParams();
     const [cast, setCast] = useState([]);
 
@@ -48,3 +48,6 @@ export const Cast = () => {
         </div>
     );
 }
+
+
+export default Cast;

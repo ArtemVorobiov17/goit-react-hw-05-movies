@@ -4,7 +4,7 @@ import { fetchInformation } from "services/api";
 import css from './Review.module.css';
 
 
-export const Review = () => {
+const Review = () => {
     const { movieId } = useParams();
     const [review, setReview] = useState([]);
 
@@ -34,3 +34,6 @@ export const Review = () => {
         </div>
     );
 }
+
+
+export default Review;

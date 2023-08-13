@@ -6,7 +6,7 @@ import { fetchSearchMovies } from 'services/api';
 
 
 
-export const Movie = () => {
+const Movie = () => {
     const location = useLocation();
     const [movies, setMovies] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
@@ -26,10 +26,13 @@ export const Movie = () => {
     return (
         <>
             <Search location={location} onSubmit={handleSubmit} />
-            {movies.length > 0
-                ? <MoviesList movies={movies} />
-                : <div>Loading...</div>
-            }
+            
+            <MoviesList movies={movies} />
+            
+            
         </>
     );    
 }
+
+
+export default Movie;
